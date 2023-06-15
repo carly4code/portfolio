@@ -1,0 +1,331 @@
+.page{
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+}
+.pageWrapper{
+  margin: 0 85px;
+}
+
+.flex{
+  display: flex;
+}
+
+/*------ Header css -------------*/
+.header{
+  padding-top: 30px;
+  font-family: var(--font-raleway);
+  font-size: 20px;
+}
+.header ul {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.header li {
+  margin: 0 1rem;
+}
+
+.header a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+/*------ Header css -------------*/
+
+section{
+  border-bottom: 2px solid;
+  padding-bottom: 1rem;
+
+}
+/*------ Home page section 1 css -------------*/
+.homePageOverview {
+  text-align: left;
+  color: var(--color-black);
+  font-family: var(--font-raleway);
+}
+
+.homePage1{
+  position: relative;
+  height: 90vh;
+  width: 100%;
+}
+
+.intro-text{
+  position: absolute;
+  left: 0;
+  background-color: transparent;
+  font-family: var(--font-lora);
+  font-size: var(--font-size-xxl);
+  top: 50%;
+  width: 100%;
+}
+.thesth{
+  position: absolute;
+  display: flex;
+  gap: 3rem;
+  font-size: var(--font-size-lg);
+}
+.role{
+  text-decoration: underline dashed 10px;
+}
+.carousel-item.active{
+  display: block;
+  animation: slideDown 0.5s ease-in-out forwards, slideUp 1s ease-in-out forwards 2.5s;
+}
+.carousel-item{
+  display: none;
+}
+.carousel-item p{
+  margin:0
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0; /* start with 0 opacity */
+    transform: translateY(-30%); /* move the element 100% up */
+  }
+  100% {
+    opacity: 1; /* end with 100% opacity */
+    transform: translateY(0); /* move the element back to its original position */
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 1; /* start with 100% opacity */
+    transform: translateY(0); /* move the element back to its original position */
+  }
+  100% {
+    opacity: 0.7; /* end with 0 opacity */
+    transform: translateY(100%); /* move the element 100% down */
+  }
+}
+/*------ Home page section 1 css -------------*/
+
+.section-head{
+  font-size: var(--font-size-xl);
+  padding: 48px 0 60px 0;
+  font-family: var(--font-lora);
+}
+#about{
+  /* position: relative; */
+}
+.mobile-hidden{
+  width:50%
+}
+.detail-text{
+  /* position:absolute; */
+  left: 50%;
+  font-size: var(--font-size-lg);
+  width:50%
+}
+
+/*------ Home page section 4 css -------------*/
+.home-contact{
+  background-color: var(--color-gainsboro);
+}
+
+/* -----------Contact Button ---------- */
+.contact-button{
+  position: relative;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 50px;
+}
+.contact-button img{
+  max-width: 107px;
+}
+
+/* .contact-button::after {
+content: "→";
+position: absolute;
+left: 0;
+bottom: 21px;
+transform: translateY(-50%);
+width: 0;
+height: 0;
+} */
+/* -----------Contact Button ---------- */
+
+.work{
+  justify-content: space-between;
+  margin-bottom: 6rem;
+  gap: 2.5rem;
+}
+.btn-container{
+  width:60%
+}
+.img-container{
+  width: 40%;
+  max-height: 419px;
+  overflow: hidden;
+}
+.img-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.portfoilo-button{
+  width: 100%;
+  display: flex;
+  font-size: var(--font-size-ml);
+  border-bottom: 1px solid;
+  margin-bottom: 2.5rem;
+  padding-bottom: 15px;
+  gap:1rem;
+  justify-content: space-between;
+}
+.change-image{
+  display: none;
+}
+.change-image.is-active{
+  display: block;
+}
+
+.image-wrapper{
+  width: 40%;
+    height: 529px;
+    overflow: hidden;
+}
+.image-wrapper img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* ------Project page--------- */
+
+.project-text{
+  min-height: 73vh;
+  max-width: 100vw;
+  position: relative;
+  max-width: 40%;
+}
+
+.project-detail{
+  position: absolute;
+  bottom:10px;
+  padding-bottom: 3rem;
+}
+
+.showcase-outter{
+  position: absolute;
+  right: 35px;
+  max-width: 30%;
+  overflow: hidden;
+  bottom: 0;
+}
+
+.showcase{
+  padding: 20px 0;
+}
+.expand{
+  height: 100vh;
+  background-color: #60606063;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.expand img{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.showcase img{
+  height: 250px;
+  object-fit: cover;
+}
+
+.prev-btn .contact-button,
+.next-btn .contact-button{
+  position: absolute;
+  bottom:0
+}
+.prev-btn .contact-button img{
+  transform: rotateY(180deg);
+}
+.next-btn .contact-button{
+  right:calc(100vw - 70%);
+}
+@media only screen and (max-width: 767px){
+  .slick-initialized .slick-slide{
+    width: 37.5vw;
+    height: 40vw;
+    max-height: 560px;
+    max-width: 700px;
+    flex: 0 0 auto;
+  }
+  .slick-slider{
+    margin-bottom: 48px;
+  }
+  .slick-initialized .slick-slide{
+    height: 100%;
+  }
+
+  .slick-slide img{
+    width:100%;
+    height: 100%;
+  }
+
+  .slick-prev:before, .slick-next:before{
+    color:var(--color-black)!important
+  }
+
+  .slider-text{
+    text-align: center;
+    font-size: var(--font-size-sm);
+  }
+  .mobile-hidden{
+    display: none;
+  }
+  .pageWrapper{
+    margin: 0 30px;
+  }
+  .detail-text{
+    width:100%
+  }
+
+  /* ----------Project page------------ */
+  .section-head{
+    padding: 17px 0 26px 0;
+    border-bottom: 1px solid;
+
+  }.project-text{
+    text-align: center;
+    max-width:100%;
+    min-height: 50vh;
+
+  }
+  .project-detail {
+    position: unset;
+}
+.showcase-outter {
+  position: unset;
+  max-width: 100%;
+  overflow: scroll;
+  display: flex;
+  gap: 1rem;
+}
+.button-group{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+.prev-btn .contact-button, .next-btn .contact-button{
+  position: unset;
+}
+}

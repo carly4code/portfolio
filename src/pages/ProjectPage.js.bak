@@ -1,0 +1,57 @@
+import React, { useEffect, useState } from 'react';
+import LinkIcon from "../image/link-icon.svg";
+import zerone from "../image/zerone-desktop.png";
+import Button from "../components/button.js";
+import { data } from '../data/data.js';
+import { useParams } from 'react-router-dom';
+
+// Todo:need to setup json server and fetch each data to a single page
+
+const ProjectPage = () => {
+
+   const [isExpanded, setIsExpanded] = useState([false, false, false]);
+
+const toggleExpand = (index) => {
+  const newExpandedState = [...isExpanded];
+  newExpandedState[index] = !newExpandedState[index];
+  setIsExpanded(newExpandedState);
+}
+
+
+    return (
+        <div className="pageWrapper">
+            {data.map((item) => (
+                <>
+                    <section id={`${item.title}`.toLowerCase().replace(/\s/g, '')}>
+                        <div className='project-text'>
+                            <div className="section-head">{item.title}</div>
+                            {item.link
+                                ? <><a href="#"><img src={LinkIcon} /></a></>
+                                : null}
+                            <div className='project-detail'>
+                                <p>Overview:{item.overview}</p><br></br>
+                                <p>Structure: {item.structure}</p>
+                            </div>
+                        </div><div className='showcase-outter'>
+
+                            <div onClick={() => toggleExpand(0)} className={`showcase ${isExpanded[0] ? 'expand' : ''}`}>
+                                <img src={item.img1}></img>
+                            </div>
+                            <div onClick={() => toggleExpand(1)} className={`showcase ${isExpanded[1] ? 'expand' : ''}`}>
+                                <img src={item.img2}
+                                ></img>
+                            </div>
+                            <div onClick={() => toggleExpand(1)} className={`showcase ${isExpanded[1] ? 'expand' : ''}`}>
+                                <img src={item.img3}></img>
+                            </div>
+                        </div><div className='button-group'>
+                            {/* <div className='prev-btn'><Button label="Previous" /></div>
+                            <div className='next-btn'><Button label="Next" /></div> */}
+                        </div></section></>
+            ))}
+        </div>
+    );
+};
+
+export default ProjectPage;
+
