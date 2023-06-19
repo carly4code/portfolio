@@ -28,6 +28,15 @@ const ProjectPage = () => {
         getData();
     }, []);
 
+    // element: image showcase
+    let string = [data.images][0];
+    let imgShowcase;
+    if (typeof (string) != 'undefined') {
+        imgShowcase = Object.keys(string).map((key) => (
+            <div className="showcase" key={key}><img src={string[key]}></img></div>
+        ));
+    }
+
 
     return (
         <div className="pageWrapper">
@@ -47,24 +56,10 @@ const ProjectPage = () => {
                     </div>
 
                     <div className='showcase-outter'>
-                        {/* todo: don't know can't map img when turning into nested data
-                        need to map the img  */}
-                                     <div className="showcase">
-                                        <img
-                                        src={data.img1}></img>
-                                     </div>
-                                     <div className="showcase">
-                                        <img
-                                        src={data.img2}></img>
-                                     </div>
-                                     <div className="showcase">
-                                        <img
-                                        src={data.img3}></img>
-                                     </div>
+                        {imgShowcase}
+                    </div>
 
-
-
-                    </div><div className='button-group'>
+                    <div className='button-group'>
                         {/* <div className='prev-btn'><Button label="Previous" /></div>
                             <div className='next-btn'><Button label="Next" /></div> */}
                     </div></>

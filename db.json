@@ -1,0 +1,52 @@
+{
+    "project": [
+      {
+        "id": 1,
+        "title": "Zerone",
+        "overview": "A website for cafe",
+        "structure": "Home page, Access(instruction of getting to the shop), Shop, Menu of the shop",
+        "img1":  "/images/zerone-desktop.png",
+        "img2": "/images/zerone-desktop.png",
+        "img3":  "/images/zerone-desktop.png"
+      },
+      {
+        "id": 2,
+        "title": "OBG",
+        "link": "https://www.obg.cuhk.edu.hk/",
+        "overview": "A website for indicating the Department of Obstetrics and Gynaecology of The Chinese University of Hong Kong & Prince of Wales Hospital. Together with reorganising the website structure and adding the Chinese version for some pages.",
+        "structure": "Home, About us, Research, Training & Education, Services, News & Event",
+        "img1": "/images/inner-page-obg-1.png",
+        "img2": "/images/inner-page-obg-2.png",
+        "img3": "/images/inner-page-obg-3.png"
+      },
+      {
+        "id": 3,
+        "title": "healthview",
+        "link": "https://path01.acp.cuhk.edu.hk/healthview/",
+        "overview": "Individual webpage of introduction of the Master of Science in Medical Laboratory Sciences for potential applicators.",
+        "structure": "Home, programme strengths, curriculum, teacher, applying indication",
+        "img1": "/images/inner-page-healthview-1.png",
+        "img2": "/images/inner-page-healthview-2.png",
+        "img3": "/images/inner-page-healthview-3.png"
+      },
+      {
+        "id": 4,
+        "title": "Impact CUHK 60",
+        "link": "https://socialimpact.cuhk.edu.hk/",
+        "overview": "A website for displaying the social impact event for CUHK 60 anniversary and searching for events. Plus, collect forms of Pledge.",
+        "structure": "Home, USR goal, social impact event, your participation, gallery",
+        "img1": "/images/inner-page-cuhk-1.png",
+        "img2": "/images/inner-page-cuhk-2.png",
+        "img3": "/images/inner-page-cuhk-3.png"
+      },
+      {
+        "id": 5,
+        "title": "Health view bioanalytic",
+        "overview": "A website for introducing the ARIA services, a convenient way to decode the risk of stroke and many other blood vessels related diseases caused by hypertension, diabetes, and lipid abnormalities. Along with displaying the servies location, latest news and blog post for website admin to edit with.",
+        "structure": "Home page, Technology breakthrough(servies introduction), News and achievements, Research and Development, Health Tibit(blog), About",
+        "img1": "/images/inner-page-healthview-1.png",
+        "img2": "/images/inner-page-healthview-2.png",
+        "img3": "/images/inner-page-healthview-3.png"
+      }
+    ]
+  }
