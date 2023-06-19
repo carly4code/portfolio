@@ -8,12 +8,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import {Home} from './pages/Home';
-import {About} from './pages/About';
-import {Intro} from './pages/intro';
-import {Contact} from './pages/Contact';
-import {Portfoilo} from './pages/Portfoilo';
-import {ProjectPage} from './pages/ProjectPage';
+import Home from './pages/Home';
+import About from './pages/About';
+import Intro from './pages/intro';
+import Contact from './pages/Contact';
+import Portfoilo from './pages/Portfoilo';
+import ProjectPage from './pages/ProjectPage';
 
 
 const router = createBrowserRouter([
