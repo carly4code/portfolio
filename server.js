@@ -1,6 +1,5 @@
 //const jsonServer = require("json-server");
-import pkg from 'json-server';
-const { create, router: _router, defaults, rewriter } = pkg;
+import jsonServer from 'json-server';
 const server = jsonServer.create();
 const router = jsonServer.router("./db.json");
 const middlewares = jsonServer.defaults({
