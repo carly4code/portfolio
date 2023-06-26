@@ -10,8 +10,7 @@ const About = () => {
        <div  className="detail-text-wrap flex">
         <div  className="mobile-hidden" ></div>
         <div className="detail-text">
-            A lump-sum payment is a monetary sum paid in one single payment
-            instead issued in installments over time.
+    I normally write code. Sometime make art and take photo. Most of the time learning.
         </div>
       </div>
     </div>

@@ -33,9 +33,8 @@ const Intro = () => {
           <div className="thesth">
             <div className="the">The</div>
               <div className="role">
-              {/* <TextSlider items={items}/> */}
+              <TextSlider items={items}/>
              </div>
-              {/* auto change to different text */}
           </div>
           </div>
         </div>
