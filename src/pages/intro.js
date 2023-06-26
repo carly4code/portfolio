@@ -1,6 +1,6 @@
 
 import React  from 'react';
-// import TextSlider from '../animations/textSlider';
+import TextSlider from '../animations/textSlider';
 // import Sketch from 'react-p5'
 
 const Intro = () => {
