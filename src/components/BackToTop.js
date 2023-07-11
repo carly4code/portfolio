@@ -32,7 +32,10 @@ const BackToTopButton = () => {
             <div class="arrow" style={{transform: 'rotate(270deg)',
     border: '1px solid',
     padding: 10,
-    background: '#ffffff40'}}>→</div>
+    background: '#ffffff40',
+    maxWidth: 64,
+    position: 'absolute',
+    right: '2rem'}}>→</div>
  </div>
     );
 };
