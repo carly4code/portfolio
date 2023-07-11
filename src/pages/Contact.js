@@ -1,5 +1,5 @@
 import React  from 'react';
-import ArrowBtn from "../components/button";
+import ArrowBtn from "../components/ArrowBtn";
 const Contact = () => {
 
     return (

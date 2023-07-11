@@ -24,28 +24,25 @@ const MobilePortfoilo = () => {
     <Slider {...settings}>
       <div>
         <img src={zeroneImage} />
-        <p className='slider-text'>hello world</p>
+        <p className='slider-text'>Zero One Coffee & Roastery</p>
       </div>
       <div>
-        <img src={zeroneImage} />
-        <p className='slider-text'>hello world</p>
+        <img src={OBGHomePage} />
+        <p className='slider-text'>OBG</p>
       </div>
       <div>
-        <img src={zeroneImage} />
-        <p className='slider-text'>hello world</p>
+        <img src={MLSHomePage} />
+        <p className='slider-text'>MLS</p>
       </div>
       <div>
-        <img src={zeroneImage} />
-        <p className='slider-text'>hello world</p>
+        <img src={CUHKHomePage} />
+        <p className='slider-text'>Impact CU60</p>
       </div>
       <div>
-        <img src={zeroneImage} />
-        <p className='slider-text'>hello world</p>
+        <img src={HvHomePage} />
+        <p className='slider-text'>HealthView bioanalytic</p>
       </div>
-      <div>
-        <img src={zeroneImage} />
-        <p className='slider-text'>hello world</p>
-      </div>
+
     </Slider>
   );
 }
@@ -53,7 +50,7 @@ const MobilePortfoilo = () => {
 const DesktopPortfoilo = () => {
   const items = [
     {
-        title: "Zerone",
+        title: "Zero One Coffee & Roastery",
         imageUrl: zeroneImage ,
     },
     {

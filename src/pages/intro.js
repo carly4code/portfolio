@@ -6,10 +6,13 @@ import TextSlider from '../animations/textSlider';
 const Intro = () => {
   const items = [
     {
-      title: "Designer",
+      title: "Front-end developer",
     },
     {
-      title: "Front-end developer",
+      title: "Adventurer",
+    },
+    {
+      title: "Self-learner",
     },
     {
       title: "Dreamer",

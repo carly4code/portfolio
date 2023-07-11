@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import LinkIcon from "../image/link-icon.svg";
-import zerone from "../image/zerone-desktop.png";
-import Button from "../components/button.js";
-import { data } from '../data/data.js';
+// import Button from "../components/ArrowBtn.js";
+
 import { useParams } from 'react-router-dom';
-import useFetch from "../hooks/useFetch.js";
+
 
 // Todo:need to setup json server and fetch each data to a single page
 
