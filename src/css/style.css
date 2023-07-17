@@ -113,21 +113,17 @@ section{
   padding: 48px 0 60px 0;
   font-family: var(--font-lora);
 }
-#about{
-  /* position: relative; */
-}
 .mobile-hidden{
   width:50%
 }
 .detail-text{
-  /* position:absolute; */
   left: 50%;
   font-size: var(--font-size-lg);
-  width:50%
+  width:50%;
 }
 
 /*------ Home page section 4 css -------------*/
-.home-contact{
+#contact{
   background-color: var(--color-gainsboro);
 }
 
@@ -139,6 +135,8 @@ section{
   display: flex;
   flex-direction: column;
   min-height: 50px;
+  font-size: 20px;
+  padding-block: 1rem;
 }
 .contact-button img{
   max-width: 107px;
@@ -301,7 +299,7 @@ height: 0;
   /* ----------Project page------------ */
   .section-head{
     padding: 17px 0 26px 0;
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid; */
 
   }.project-text{
     text-align: center;

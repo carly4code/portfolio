@@ -1,7 +1,9 @@
 //const jsonServer = require("json-server");
 import jsonServer from 'json-server';
 const server = jsonServer.create();
-const router = jsonServer.router("./db.json");
+const router = jsonServer.router("./src/data/data2.json");
+
+// const router = jsonServer.router("./db.json");
 const middlewares = jsonServer.defaults({
   static: "./build",
 });
