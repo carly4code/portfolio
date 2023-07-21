@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import LinkIcon from "../image/link-icon.svg";
 // import Button from "../components/ArrowBtn.js";
@@ -30,7 +31,7 @@ const ProjectPage = () => {
         // };
         const fetchTasks = async () => {
             // const res = await axios.get(baseUrl);
-            const { data } = await axios.get(`${baseUrl}/${taskId}`);
+            const { data } = await axios.get(`${baseUrl}/${projectId}`);
             setData(data);
         };
 
