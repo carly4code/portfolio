@@ -18,7 +18,8 @@ const ProjectPage = () => {
         };
 
         // Fetch local host:
-         fetch(`http://localhost:3000/project/${projectId}`, requestOptions)
+        //  fetch(`http://localhost:3000/project/${projectId}`, requestOptions)
+         fetch(`https://carlyportfolio-890ca102755c.herokuapp.com/project/${projectId}`, requestOptions)
             .then((response) => response.json())
             .then((result) => setData(result))
             .catch((error) => console.log("error", error));
