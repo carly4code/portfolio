@@ -12,32 +12,33 @@ export const PortfoBtn = ({
 
     return (
         <>
-                <div className='btn-container'>
+            <div className='btn-container'>
                 {items.map((item, index) => (
 
-                     <Link to={`/project/${index + 1}`} target="_blank">
-                    <a
+
+                    <><a
                         key={index}
                         onMouseEnter={() => handleEnter(index)}
                         className="portfoilo-button"
                         target="_blank"
+                        href={`${item.link}`}
                     >
                         <div>{item.title}</div>
-                        <div className="arrow">→</div>
-                    </a>
-                     </Link>
+                    </a><Link to={`/project/${index + 1}`} target="_blank">
+                            <div className="arrow">→</div>
+                        </Link></>
                 ))}
-                </div>
+            </div>
 
-                <div className='img-container'>
-                    {items.map((item, index) => (
-                        <img
-                            key={index}
-                            src={item.imageUrl}
-                            className={`change-image ${activeImage === index ? 'is-active' : ''}`}
-                        />
-                    ))}
-                </div>
+            <div className='img-container'>
+                {items.map((item, index) => (
+                    <img
+                        key={index}
+                        src={item.imageUrl}
+                        className={`change-image ${activeImage === index ? 'is-active' : ''}`}
+                    />
+                ))}
+            </div>
 
         </>
     )
