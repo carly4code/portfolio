@@ -56,14 +56,17 @@ const DesktopPortfoilo = () => {
     {
         title: "OBG",
         imageUrl: OBGHomePage,
+        link: "https://www.obg.cuhk.edu.hk/"
     },
     {
         title: "MLS",
         imageUrl: MLSHomePage,
+        link:"https://path01.acp.cuhk.edu.hk/mls/"
     },
     {
       title: "Impact CU60",
       imageUrl: CUHKHomePage,
+      link: "https://socialimpact.cuhk.edu.hk/",
   },
     {
       title: "HealthView bioanalytic",
