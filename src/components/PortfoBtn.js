@@ -10,26 +10,27 @@ export const PortfoBtn = ({
         setActiveImage(index);
     };
 
-    console.log({items})
+    console.log({ items })
 
     return (
         <>
             <div className='btn-container'>
                 {items.map((item, index) => (
-                    <div className='flex'><a
-                        key={index}
-                        onMouseEnter={() => handleEnter(index)}
-                        className="portfoilo-button"
-                        target="_blank"
-                        href={`${item.link}`}
-
-                    >
-                        <div>{item.title}</div>
-                    </a>
-                    <Link to={`/project/${index + 1}`} target="_blank">
+                    //<Link to={`/project/${index + 1}`} target="_blank">
+                    <Link to={item.link ? item.link : `/project/${index + 1}`} target="_blank">
+                        <div className='flex'><a
+                            key={index}
+                            onMouseEnter={() => handleEnter(index)}
+                            className="portfoilo-button"
+                            target="_blank"
+                          //  href={`${item.link}`}
+                            >
+                            <div>{item.title}</div>
+                        </a>
                             <div className="arrow">→</div>
-                        </Link>
                         </div>
+                    </Link>
+
                 ))}
             </div>
 
