@@ -52,6 +52,7 @@ const DesktopPortfoilo = () => {
     {
         title: "Zero One Coffee & Roastery",
         imageUrl: zeroneImage ,
+        subtitle: "Zerone"
     },
     {
         title: "OBG",
@@ -68,10 +69,10 @@ const DesktopPortfoilo = () => {
       imageUrl: CUHKHomePage,
       link: "https://socialimpact.cuhk.edu.hk/",
   },
-    {
-      title: "HealthView bioanalytic",
-      imageUrl: HvHomePage,
-  },
+  //   {
+  //     title: "HealthView bioanalytic",
+  //     imageUrl: HvHomePage,
+  // },
 ];
 
   return (

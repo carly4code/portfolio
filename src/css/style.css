@@ -1,4 +1,4 @@
-.page {
+.homePageOverview {
   width: 100%;
   height: 100%;
   max-width: 100vw;
@@ -127,6 +127,44 @@ section {
 .carousel-item p {
   margin: 0
 }
+
+.icon-block {
+  padding-top: 8rem;
+  display: flex;
+  align-items: center;
+  display: flex;
+  font-size: 1.7rem;
+  left: 0;
+  position: absolute;
+}
+
+.icon-block p {
+  border-right: 2px solid rgba(45, 46, 50, .5);
+  font-weight: 600;
+  margin-right: 2rem;
+  padding-right: 2rem;
+}
+
+.icon-block ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.codingGirl {
+  position: absolute;
+  right: 12vw;
+  max-width: '50%';
+  top: -164px
+}
+
+.codingGirl img{
+  height: 46vh;
+  object-fit: cover
+}
+
+
 
 @keyframes slideDown {
   0% {
@@ -342,6 +380,9 @@ section {
 }
 
 @media only screen and (max-width: 767px) {
+  .codingGirl{
+    display: none;
+  }
   .slick-initialized .slick-slide {
     width: 37.5vw;
     height: 40vw;

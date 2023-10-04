@@ -30,7 +30,6 @@ const ProjectPage = () => {
         //         .catch((error) => console.log("error", error));
         // };
         const fetchTasks = async () => {
-            // const res = await axios.get(baseUrl);
             const { data } = await axios.get(`${baseUrl}/${projectId}`);
             setData(data);
         };

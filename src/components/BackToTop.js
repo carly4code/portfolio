@@ -38,7 +38,7 @@ const BackToTopButton = () => {
                 background: '#ffffff40',
                 maxWidth: 64,
                 position: 'fixed',
-                right: '2rem',
+                right: '10rem',
                 bottom: 30,
                 cursor: 'pointer',
                 zIndex: '10'
