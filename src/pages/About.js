@@ -8,7 +8,7 @@ const dropIn = {
     y: 300
   },
   onscreen: {
-    y: 50,
+    y: 0,
     transition: {
       type: "inertial",
       bounce: 0.6,
