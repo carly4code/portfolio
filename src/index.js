@@ -41,8 +41,8 @@ const router = createBrowserRouter([
     path: "project/:projectId",
     element: <ProjectPage/>,
   },
-    {
-    path: "https://carlyportfolio-890ca102755c.herokuapp.com/project/${projectId}",
+ {
+    path: "project/1",
     element: <ProjectPage/>,
   },
 ]);
