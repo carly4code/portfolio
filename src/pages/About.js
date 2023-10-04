@@ -54,7 +54,7 @@ const About = () => {
         <div className="detail-text-wrap flex">
           <div className="mobile-hidden" ></div>
           <motion.div className="detail-text"
-          variants={rightIn}
+          variants={dropIn}
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.8 }}>
