@@ -5,7 +5,7 @@ import { motion } from "framer-motion/dist/framer-motion";
 
 const dropIn = {
   offscreen: {
-    y: 300
+    y: 100
   },
   onscreen: {
     y: 0,
@@ -16,31 +16,16 @@ const dropIn = {
     }
   }
 };
-const rightIn = {
-  offscreen: {
-    y: 100,
-    x: 50
-  },
-  onscreen: {
-    x: 0,
-    y:0,
-    transition: {
-      type: "inertial",
-      bounce: 0.6,
-      duration: 1
-    }
-  }
-};
 
-const MotionTop = ({ divText }) => {
+const MotionTop = ({ children, className }) => {
   return (
     <motion.div
-      className="section-head"
+      className={className}
       variants={dropIn}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.5 }}>
-      {divText}
+      {children}
     </motion.div>
   )
 }
@@ -50,21 +35,17 @@ const About = () => {
   return (
     <section id="about">
       <div className="whatIDo pageWrapper">
-        <MotionTop divText={'What I do?'} />
+        <MotionTop className={'section-head'}>What I do</MotionTop>
         <div className="detail-text-wrap flex">
           <div className="mobile-hidden" ></div>
-          <motion.div className="detail-text"
-          variants={dropIn}
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}>
+          <div className={"detail-text"}>
            <p> I normally write code(or copy & paste). Then bugs appear. I fix bugs, and more bugs appear.....</p>
            <p> Then I roll up my sleeves. Start the journey of learning deeper.</p>
            <p>I make art using code when bugs didn't distroy me. It's the fun part of coding and fun part of me.</p>
             <a href='https://editor.p5js.org/carly4code/sketches'>
               <ArrowBtn label="See my sketches" />
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

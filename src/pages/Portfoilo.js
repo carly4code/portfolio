@@ -50,11 +50,6 @@ const MobilePortfoilo = () => {
 const DesktopPortfoilo = () => {
   const items = [
     {
-        title: "Zero One Coffee & Roastery",
-        imageUrl: zeroneImage ,
-        subtitle: "Zerone"
-    },
-    {
         title: "OBG",
         imageUrl: OBGHomePage,
         link: "https://www.obg.cuhk.edu.hk/"
@@ -69,10 +64,10 @@ const DesktopPortfoilo = () => {
       imageUrl: CUHKHomePage,
       link: "https://socialimpact.cuhk.edu.hk/",
   },
-  //   {
-  //     title: "HealthView bioanalytic",
-  //     imageUrl: HvHomePage,
-  // },
+    {
+      title: "HealthView bioanalytic",
+      imageUrl: HvHomePage,
+  },
 ];
 
   return (
