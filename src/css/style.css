@@ -159,7 +159,7 @@ section {
   top: -164px
 }
 
-.codingGirl img{
+.codingGirl img {
   height: 46vh;
   object-fit: cover
 }
@@ -206,6 +206,12 @@ section {
   font-family: var(--font-lora);
 }
 
+.section-subhead {
+  font-size: 40px;
+  padding-bottom: 2.5rem;
+  color: #515151;
+}
+
 .mobile-hidden {
   width: 50%
 }
@@ -214,6 +220,62 @@ section {
   left: 50%;
   font-size: var(--font-size-lg);
   width: 50%;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.react-project {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.react-project-detail {
+  max-width: 50%;
+  position: relative;
+}
+
+.react-project-detail img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  transition: .5s ease;
+}
+
+.react-project-detail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  /* Change this to your preferred overlay color */
+  transition: background 0.3s ease;
+}
+
+.react-project-detail:hover::before {
+  background: rgb(147 147 147 / 50%);
+  /* Change this to your preferred hover color */
+}
+
+.react-project-detail .contact-button {
+  display: none;
+}
+
+.react-project-detail:hover .contact-button {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.react-project-detail .contact-button img {
+  height: auto;
 }
 
 /*------ Home page section 4 css -------------*/
@@ -380,9 +442,10 @@ section {
 }
 
 @media only screen and (max-width: 767px) {
-  .codingGirl{
+  .codingGirl {
     display: none;
   }
+
   .slick-initialized .slick-slide {
     width: 37.5vw;
     height: 40vw;
