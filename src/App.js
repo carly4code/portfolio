@@ -10,9 +10,7 @@ const HomePageOverview = () => {
 
   return (
       <div className={GlobalStyles}>
-        <div className="page">
           <Header />
-        </div>
       </div >
   );
 };
