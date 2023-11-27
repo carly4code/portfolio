@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useMediaQuery from '../hooks/useMediaQuery.js';
 import ArrowBtn from '../components/ArrowBtn.js';
 import PortfoBtn from "../components/PortfoBtn.js";
@@ -26,10 +26,7 @@ const MobilePortfoilo = () => {
   };
   return (
     <Slider {...settings}>
-      <div>
-        <img src={zeroneImage} />
-        <p className='slider-text'>Zero One Coffee & Roastery</p>
-      </div>
+
       <div>
         <img src={OBGHomePage} />
         <p className='slider-text'>OBG</p>
@@ -79,6 +76,7 @@ const DesktopPortfoilo = () => {
     }
   ];
 
+
   return (
     <div className="work flex">
       <PortfoBtn items={items} />
@@ -91,35 +89,60 @@ const DesktopPortfoilo = () => {
 const Portfoilo = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
 
+  const reactItems = [
+    {
+      title: "Charity Finder",
+      subtitle: "A charity finder application for finding your chairty",
+      imageUrl: CharityHomePage,
+      link: "https://charity-finder-36jpjfeh7-carly4codes-projects.vercel.app/"
+    },
+    {
+      title: "Beta portal",
+      subtitle: "ACCOUNT LOGIN\nemployee:EMP40005 password:de12345\nmanager:MAN30002 password:mm12345",
+      imageUrl: BetaHomePage,
+      link: "https://betaportal.netlify.app/"
+    },
+  ]
+
+  const [activeTab, setActiveTab] = useState('CMS');
+
+  const openTab = (tabName) => {
+    setActiveTab(tabName);
+  };
+
+  const Tab = ({ label, isActive, content }) => {
+    return (
+      <button
+        className={`tablinks ${isActive ? 'active' : ''}`}
+        onClick={() => openTab(content)}>
+        {label}
+      </button>
+    );
+  };
+
+
   return (
     <section id="portfoilo">
       <div className="pageWrapper">
-        <div className="section-head">Portfoilo</div>
-        <div className="section-subhead">//CMS Website</div>
-        {isMobile ? <MobilePortfoilo /> : <DesktopPortfoilo />}
-        <div className='project-container'>
+        <div className="section-head">Portfolio</div>
+        <div className="tab">
+          <Tab label="CMS" isActive={activeTab === 'CMS'} content="CMS" />
+          <Tab label="React" isActive={activeTab === 'React'} content="React" />
+        </div>
 
-          {/* //react project: need to refactor */}
-          <div className="section-subhead">//React Project</div>
-          <div className="react-project">
-            <div className="react-project-detail">
-              <img src={CharityHomePage} />
-              <p>Charity Finder</p>
-              <p>A charity finder application for finding your chairty</p>
-              <a href='https://charity-finder-36jpjfeh7-carly4codes-projects.vercel.app'>
-              <ArrowBtn label="View Live Site" />
-            </a>
-            </div>
-            <div className="react-project-detail">
-              <img src={BetaHomePage} />
-              <p>Beta portal </p>
-              <p>A portal for manager and employee to manage the tasks</p>
-              <a href='https://betaportal.netlify.app/'>
-              <ArrowBtn label="View Live Site" />
-            </a>
+        {activeTab === 'CMS' && (
+          <div id="CMS" className="tabcontent">
+            {isMobile ? <MobilePortfoilo /> : <DesktopPortfoilo />}
+          </div>
+        )}
+
+        {activeTab === 'React' && (
+          <div id="React" className="tabcontent">
+            <div className="work flex">
+              <PortfoBtn items={reactItems} />
             </div>
           </div>
-        </div>
+        )}
       </div>
 
     </section>

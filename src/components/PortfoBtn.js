@@ -23,7 +23,7 @@ export const PortfoBtn = ({
                             target="_blank"
                         >
                             <div>{item.title}</div>
-                        </a>
+                        {item.subtitle ? <div>{item.subtitle.split('\n').map((line, i) => (<span key={i}>{line}<br /></span>))}</div> : ''}                        </a>
                             <div className="arrow">→</div>
                         </div>
                     </Link>
