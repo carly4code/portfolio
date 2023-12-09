@@ -41,12 +41,7 @@ const router = createBrowserRouter([
     path: "project/:projectId",
     element: <ProjectPage/>,
   },
-    {
-    path: "project/1",
-    element: <ProjectPage/>,
-  },
 ]);
-const baseUrl = 'https://carlyportfolio-890ca102755c.herokuapp.com/project';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))

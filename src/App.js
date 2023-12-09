@@ -6,12 +6,13 @@ import GlobalStyles from "./css/Global.css";
 import Header from "./components/Header.js";
 
 
+
 const HomePageOverview = () => {
 
   return (
-      <div className={GlobalStyles}>
-          <Header />
-      </div >
+    <div className={GlobalStyles}>
+      <Header />
+    </div >
   );
 };
 

@@ -1,8 +1,11 @@
 
 import React from 'react';
 import TextSlider from '../animations/textSlider';
+
 import IntoImg from '../image/Coding_Girl.svg';
-// import Sketch from 'react-p5'
+import SketchOne from '../p5js/SketchOne.js';
+import Playground from '../p5js/Playground.js';
+
 
 import { AiOutlineHtml5 } from 'react-icons/ai';
 import { FaCss3 } from 'react-icons/fa';
@@ -28,19 +31,16 @@ const Intro = () => {
       title: "Dreamer",
     },
   ];
-  // const setup = (p5, canvasParentRef) => {
-  //   p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef)
-  // }
 
-  // const draw = p5 => {
-
-  // }
 
   return (
 
     <section id="home">
-      {/* <Sketch setup={setup} draw={draw} /> */}
+
+
       <div className="pageWrapper homePage1">
+        <div>
+
         <div className="intro-text">
           <div className="carly">Carly Or</div>
           <div className="thesth">
@@ -66,12 +66,15 @@ const Intro = () => {
           </div>
 
           {/* image */}
-          <div className='codingGirl'>
+          {/* <div className='codingGirl'>
             <img src={IntoImg}></img>
-
-          </div>
+          </div> */}
+          {/* <P5Sketch /> */}
         </div>
+          <Playground />
+          </div>
       </div>
+
     </section>
   );
 };
